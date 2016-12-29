@@ -4,12 +4,12 @@
 <localVariables/>
 <variableMappings/>
 <dataSources>
-  <DataSource id="tinyworld.tinydb::tinyf.country">
+  <DataSource id="tinyworld.tinydb::tinyf.country" partitionedExecution="false">
     <resourceUri>tinyworld.tinydb::tinyf.country</resourceUri>
   </DataSource>
 </dataSources>
 <calculationViews>
-  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="SQL">
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="SQL" partitionedExecution="false">
     <viewAttributes>
       <viewAttribute id="name" measureType="simple">
         <descriptions defaultDescription="name"/>
@@ -23,9 +23,7 @@
     <input node="tinyworld.tinydb::tinyf.country">
       <mapping xsi:type="Calculation:AttributeMapping" target="name" source="name"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="partof_continent" source="partof.continent"/>
-    </input>
-    <filter>&quot;partof_continent&quot;='Europe'</filter>
-  </calculationView>
+    </input></calculationView>
 </calculationViews>
 <logicalModel id="Projection_1">
   <attributes>
